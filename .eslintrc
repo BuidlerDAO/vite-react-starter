@@ -1,0 +1,64 @@
+{
+  "root": true,
+  "env": {
+    "node": true,
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:tailwindcss/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true
+    }
+  },
+  "plugins": [
+    "react",
+    "react-hooks",
+    "@typescript-eslint",
+    "tailwindcss",
+    "prettier"
+  ],
+  "settings": {
+    "import/ignore": ["node_modules"],
+    "react": {
+      "version": "detect"
+    }
+  },
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "semi": true,
+        "bracketSpacing": true,
+        "tabWidth": 2,
+        "useTabs": false,
+        "htmlWhitespaceSensitivity": "strict",
+        "trailingComma": "none",
+        "endOfLine": "lf"
+      }
+    ],
+    "no-debugger": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "no-console": "warn",
+    "sort-imports": [
+      "error",
+      {
+        "ignoreCase": true,
+        "ignoreDeclarationSort": true
+      }
+    ],
+    "tailwindcss/no-custom-classname": "off"
+  }
+}
