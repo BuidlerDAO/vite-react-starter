@@ -23,9 +23,9 @@ export default ({ command, mode }: ConfigEnv): UserConfigExport => {
       mode === 'prod'
         ? `${baseConfig.cdn.host}${projectBasePath}`
         : mode === 'test'
-        ? baseConfig.publicPath + '/'
+        ? baseConfig.publicPath
         : mode === 'grey'
-        ? baseConfig.publicPath + '/'
+        ? baseConfig.publicPath
         : './',
     plugins: [
       react(),
